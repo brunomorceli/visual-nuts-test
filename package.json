@@ -1,0 +1,19 @@
+{
+  "name": "visual-nuts-bruno-morceli-test",
+  "version": "1.0.0",
+  "description": "just a test",
+  "main": "1.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Bruno Morceli",
+  "license": "ISC",
+  "dependencies": {
+    "countries-list": "^2.6.1",
+    "jest": "^28.1.2"
+  }
+}
