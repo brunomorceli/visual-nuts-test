@@ -60,3 +60,10 @@ console.log('■ Countries speaking the most languages in the world', exercise2.
 
 console.log('----------------------------------------------------------------------------');
 console.log('■ Countries speaking the most languages in the world that have Germany as their official language:', exercise2.getByLanguageAmount('de'));
+
+console.log('----------------------------------------------------------------------------');
+console.log('■ Get most spoken language:', exercise2.getMostSpoken());
+console.log('');
+
+console.log('----------------------------------------------------------------------------');
+console.log('■ Get the 3 most spoken languages:', exercise2.getMostSpoken(3));

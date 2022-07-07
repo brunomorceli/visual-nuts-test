@@ -73,6 +73,37 @@ class CountryManager {
       total: hitMax,
     };
   }
+
+  getMostSpoken(results = 1) {
+    const list = {};
+    for(let i in this._countries) {
+      const { languages } = this._countries[i];
+
+      for (let a of languages) {
+        if (!list[a]) {
+          list[a] = 0;
+        }
+
+        list[a]++;
+      }
+    }
+
+    return Object
+      .keys(list)
+      .map((key) => ({ language: key, total: list[key] }))
+      .sort((a, b) => {
+        if (a.total > b.total) {
+          return -1;
+        }
+
+        if (a.total < b.total) {
+          return 1;
+        }
+
+        return 0;
+      })
+      .slice(0, results);
+  }
 }
 
 module.exports = CountryManager.getInstance();
